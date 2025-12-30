@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Sent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Message Sent Successfully ✅</h1>
+</header>
+
+<section class="page">
+    <p><b>Name:</b> <span id="name"></span></p>
+    <p><b>Email:</b> <span id="email"></span></p>
+    <p><b>Message:</b></p>
+    <p id="message"></p>
+
+    <p style="color:green; margin-top:20px;">Thank you! We will contact you shortly.</p>
+
+    <a href="index.html"><button>Go Home</button></a>
+</section>
+
+<script>
+const data = new URLSearchParams(window.location.search);
+
+document.getElementById("name").innerText = data.get("name");
+document.getElementById("email").innerText = data.get("email");
+document.getElementById("message").innerText = data.get("message");
+</script>
+
+</body>
+</html>
